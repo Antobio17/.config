@@ -1,0 +1,100 @@
+# Colors (Ayu Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x282c34'
+    foreground: '0xbbc2cf'
+
+  # Normal colors
+  normal:
+    black:   '0x1c1f24'
+    red:     '0xff6c6b'
+    green:   '0x98be65'
+    yellow:  '0xda8548'
+    blue:    '0x51afef'
+    magenta: '0xc678dd'
+    cyan:    '0x5699af'
+    white:   '0x202328'
+
+  # Bright colors
+  bright:
+    black:   '0x5b6268'
+    red:     '0xda8548'
+    green:   '0x4db5bd'
+    yellow:  '0xecbe7b'
+    blue:    '0x3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+    magenta: '0xa9a1e1'
+    cyan:    '0x46d9ff'
+    white:   '0xdfdfdf'
+
+
+font:
+    # Normal (roman) font face
+    normal:
+      # Font family
+      #
+      #Default:
+      #   - (macOS) Menlo
+      #   - (Linux) monospace
+      #   - (Windows) Consolas
+      # family: 'SF Mono'
+    
+      # The `style` can be specified to pick a specific face.
+      family: Anonymice Nerd Font
+
+    bold:
+      family: Anonymice Nerd Font
+
+    italic:
+      family: Anonymice Nerd Font
+
+# Point size
+size: 11.0
+
+offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 15
+    y: 15
+    dynamic_padding: true
+  # Window dimensions in character columns and lines
+  # Falls back to size specified by window manager if set to 0x0.
+  # (changes require restart)
+  
+    
+
+# Window decorations
+  #
+  # Available values:
+  # - full: borders and title bar
+  # - none: neither borders nor title bar
+  # - transparent: title bar, transparent background and title bar buttons
+  # - buttonless: title bar, transparent background, but no title bar buttons
+  decorations: full
+
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.9
+
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
