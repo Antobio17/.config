@@ -218,6 +218,11 @@ globalkeys = my_table.join(
 
     -- {{{ Personal keybindings
     -- Launch xrandr
+    awful.key({ modkey, altkey },            "0",     function ()
+        awful.util.spawn("telegram-desktop") end,
+                  {description = "run Telegram", group = "Antobio Shortcuts"}),
+
+    -- Launch xrandr
     awful.key({ modkey, altkey },            "x", function() xrandr.xrandr() awful.spawn.with_shell("nitrogen --restore") end,
                   {description = "launch xrandr", group = "Antobio Shortcuts"}),
 
